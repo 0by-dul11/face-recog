@@ -26,7 +26,7 @@ def generate_frames():
             for (x, y, w, h) in faces:
                 roi_gray = gray[y:y+h, x:x+w]
                 id_, conf = recognizer.predict(roi_gray)
-                if conf >= 50 and conf <= 90:
+                if conf >= 60 and conf <= 90:
                     name = labels[id_]
                     cv2.putText(frame, name, (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
