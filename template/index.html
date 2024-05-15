@@ -3,12 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Face Recpgnition</title>
+    <style>
+    body{
+     display: flex;
+    }
+    .camera{
+        height: 35rem;
+        width: 50rem;
+        border: 1px solid black;
+        padding: 3rem;
+    }
+    .details{
+        border: 1px solid black;
+        padding: 3rem;
+        width: 15rem;
+        margin: 3rem;
+        margin-right: 10rem;
+    }
+    </style>
 </head>
 <body>
-    <h1> Live Streaming </h1>
-    <div>
-        <img src="{{ url_for('video') }}" width="50%" alt="Camera Not Found"/>
+    <div class="details">
+        <p class="dp">
+            <h1>Details: </h1> <br>
+            Name: <br>
+            ID: <br>
+            Email: <br>
+        </p>
+    </div>
+    <div class="camera">
+        <h1>
+            Live Streaming
+        </h1>
+        <img src="{{ url_for('video') }}" alt="Camera Not Found"/>
     </div>
 </body>
 </html>
